@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - To Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <header class="header">
+      <div class="logo">✓</div>
+      <div>
+        <h1>TaskFlow</h1>
+        <p>Your day, organized beautifully.</p>
+      </div>
+    </header>
+
+    <section class="welcome">
+      <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+      <h2>Make today count ✨</h2>
+      <p>Small steps every day lead to big results.</p>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span>Total Tasks</span>
+        <h2 id="totalTasks">0</h2>
+      </div>
+      <div class="stat-card">
+        <span>Completed</span>
+        <h2 id="completedTasks">0</h2>
+      </div>
+      <div class="stat-card">
+        <span>Remaining</span>
+        <h2 id="remainingTasks">0</h2>
+      </div>
+    </section>
+
+    <section class="progress-card">
+      <div class="progress-info">
+        <h3>Today's Progress</h3>
+        <span id="progressText">0%</span>
+      </div>
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+    </section>
+
+    <main class="task-card">
+      <div class="section-heading">
+        <div>
+          <h2>My Tasks</h2>
+          <p>Keep your priorities in focus.</p>
+        </div>
+        <span class="task-icon">✦</span>
+      </div>
+
+      <form id="taskForm">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="What needs to get done?"
+          maxlength="120"
+          autocomplete="off"
+          required
+        >
+        <button type="submit" class="add-btn">+ Add Task</button>
+      </form>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="active">Pending</button>
+        <button class="filter" data-filter="completed">Completed</button>
+      </div>
+
+      <ul id="taskList"></ul>
+
+      <div id="emptyState">
+        <div class="empty-icon">☁️</div>
+        <h3 id="emptyTitle">Your space is clear!</h3>
+        <p id="emptyMessage">Add a task and start making progress.</p>
+      </div>
+
+      <div class="footer">
+        <span id="taskSummary">0 tasks left</span>
+        <button id="clearCompleted" type="button">
+          Clear completed
+        </button>
+      </div>
+    </main>
+
+    <p class="bottom-note">DESIGNED FOR YOUR PRODUCTIVE DAYS ♡</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
